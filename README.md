@@ -5,10 +5,10 @@
 
 # Features
  
-・Sass/Scssをコンパイル出来る
-・ES6記法をES5に変換しバンドル出来る
-・Hot reloadが出来る。
-・CSS内のurlを読み込める。
+・Sass/Scssをコンパイル出来る  
+・ES6記法をES5に変換しバンドル出来る  
+・Hot reloadが出来る。  
+・CSS内のurlを読み込める。  
  
 # Usage
 
