@@ -1,0 +1,14 @@
+$lt:1200px;
+$lr:991px;
+$md:767px;
+$sr:543px;
+$st:300px;
+
+@mixin mq($break-points) {
+  @media screen and(max-width:$break-points) {
+    @content;
+  }
+}
+
+$w: #fff;
+$bk: #333;
