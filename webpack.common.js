@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 module.exports = {
@@ -15,9 +15,15 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              // プリセットを指定することで、ES2020 を ES5 に変換
+              '@babel/preset-env',
+            ]
+          }
         }
       },
       {
@@ -34,7 +40,10 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2
+            }
           },
           {
             loader: 'postcss-loader',
@@ -42,7 +51,17 @@ module.exports = {
               autoprefixer: {
                 browsers: ['last 2 versions']
               },
-              plugins: () => [autoprefixer]
+              plugins: [
+                require("autoprefixer")({
+                  grid: true,
+                  browsers: [
+                    'last 2 versions',
+                    'ie >= 11',
+                    'Android >= 4',
+                    'iOS >= 8'
+                  ]
+                })
+              ]
             }
           },
           {
@@ -64,7 +83,8 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      minify: false
     }),
     new MiniCssExtractPlugin()
   ]
