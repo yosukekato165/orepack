@@ -1,6 +1,6 @@
 {
-  "name": "webpack-babel-sass",
-  "version": "1.1.0",
+  "name": "orepack",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Yosuke kato",
   "license": "MIT",
@@ -33,5 +33,21 @@
     "@babel/polyfill": "^7.10.4",
     "normalize.css": "^8.0.1",
     "picturefill": "^3.0.3"
-  }
+  },
+  "browserslist": [
+  "last 3 version",
+  "> 5%",
+  "IE 11",
+  "Android >= 4",
+  "iOS >= 8"
+  ],
+  "description": "自分用の開発環境",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosukekato165/orepack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yosukekato165/orepack/issues"
+  },
+  "homepage": "https://github.com/yosukekato165/orepack#readme"
 }
