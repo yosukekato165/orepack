@@ -1,6 +1,8 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const autoprefixer = require('autoprefixer');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -65,7 +67,7 @@ module.exports = {
       },
       {
         // 対象となるファイルの拡張子
-        test: /\.(gif|png|jpg|eot|wof|woff|ttf|svg)$/,
+        test: /\.(gif|png|jpg|eot|wof|woff|ttf|svg|webp)$/,
         // 画像を埋め込まず任意のフォルダに保存する
         loader: 'file-loader',
         options: {
@@ -80,6 +82,33 @@ module.exports = {
       filename: './index.html',
       minify: false
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "./src/images",
+          to: "./images/"
+        },
+      ],
+    }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '65-80'
+      },
+      gifsicle: {
+        interlaced: false,
+        optimizationLevel: 1,
+        colors: 256
+      },
+      svgo: {
+      },
+      plugins: [
+        ImageminMozjpeg({
+          quality: 80,
+          progressive: true
+        })
+      ]
+    })
   ]
 };

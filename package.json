@@ -1,6 +1,6 @@
 {
   "name": "orepack",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "main": "index.js",
   "author": "Yosuke kato",
   "license": "MIT",
@@ -14,10 +14,16 @@
     "@babel/preset-env": "^7.9.5",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.5.1",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.0.4",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "postcss-loader": "^3.0.0",
@@ -35,11 +41,11 @@
     "picturefill": "^3.0.3"
   },
   "browserslist": [
-  "last 3 version",
-  "> 5%",
-  "IE 11",
-  "Android >= 4",
-  "iOS >= 8"
+    "last 3 version",
+    "> 5%",
+    "IE 11",
+    "Android >= 4",
+    "iOS >= 8"
   ],
   "description": "自分用の開発環境",
   "repository": {
