@@ -4,8 +4,6 @@
     <list default="true" id="7fcf6d21-55cf-4dd9-a4e6-cb15843d5f7b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +38,18 @@
       <option name="presentableId" value="Default" />
       <updated>1596809741105</updated>
       <workItem from="1596809742308" duration="1508000" />
-      <workItem from="1596812211409" duration="4591000" />
+      <workItem from="1596812211409" duration="5202000" />
+      <workItem from="1597647680299" duration="38000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="206" width="655" height="510" key="find.popup" timestamp="1597647694621">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="392" y="206" width="655" height="510" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1597647694621" />
   </component>
 </project>
