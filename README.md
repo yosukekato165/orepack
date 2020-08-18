@@ -5,6 +5,7 @@
 
 # Features
  
+ 
 ・Sass/Scssをコンパイル出来る  
 ・ES6記法をES5に変換しバンドル出来る  
 ・Hot reloadが出来る。  
@@ -12,6 +13,10 @@
  
 # Usage
 
+はじめに
+```bash
+npm install -y
+```
 開発
 ```bash
 npm start
@@ -22,18 +27,3 @@ npm start
 npm run build
 ```
  
-# Note
- 
-圧縮したくない場合は、
-```bash
-module.exports = merge(common, {
-  mode: 'production'
-});
-```
-↓
-```bash
-module.exports = merge(common, {
-  mode: 'development'
-});
-```
-※JSはproductionで最適化したものを圧縮されてないフォルダに移植する必要があります。
