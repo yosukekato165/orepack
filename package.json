@@ -1,6 +1,6 @@
 {
   "name": "orepack",
-  "version": "2.1.1",
+  "version": "2.2.1",
   "main": "index.js",
   "author": "Yosuke kato",
   "license": "MIT",
@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
+    "hard-source-webpack-plugin": "^0.13.1",
     "normalize.css": "^8.0.1",
     "picturefill": "^3.0.3"
   },
